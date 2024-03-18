@@ -1,0 +1,34 @@
+Navigate to project folder and run the following in terminal:
+
+python start.py runserver 8080 (Presented port is for localhost. Changes necessary for production)
+
+
+---------------
+
+
+Changing the server port for a Django application running in development mode is quite simple. When you run the python manage.py runserver command, you can specify a different port by appending it to the command.
+
+Changing the Port
+By default, the Django development server runs on port 8000. If you'd like to use port 8080 instead, for example, you can run:
+
+bash
+Copy code
+python manage.py runserver 8080
+Binding to a Public IP Address
+By default, the server only binds to localhost. If you want to make your development server accessible from other computers, you need to bind it to a public IP address or use 0.0.0.0 to bind it to all network interfaces. Be careful with this setting, as it will allow anyone who can connect to this IP address to access your development server. To run the server on IP 192.168.0.2 and port 8080, for example, you'd run:
+
+bash
+Copy code
+python manage.py runserver 192.168.0.2:8080
+Running on a Different Host
+You can also specify a different host by using the --host option, like so:
+
+bash
+Copy code
+python manage.py runserver --host=192.168.0.2 --port=8080
+Notes
+If you are running the server on a port less than 1024 (e.g., port 80, which is the standard port for HTTP), you will usually need administrative (root) privileges.
+
+If you bind to a public IP, make sure your firewall is configured to allow traffic on that port, and be aware of the security implications. The Django development server is not designed to be used in production, and exposing it to a public network can be risky.
+
+Remember, the methods described are meant for development purposes and should not be used in a production environment. For production, you'd typically set up a more robust web server like Apache or Nginx to proxy requests to your Django application.

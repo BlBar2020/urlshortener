@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'images/BlakeBaron_logo_small.png' %}" alt="Logo" class="logo">
+        <img src="{% static 'images/URLShortenerBanner.png' %}" alt="Title" class="banner">
+    <form method="post" class="form-style">
+        {% csrf_token %}
+        <input type="text" name="long_url" placeholder="Enter long URL" required class="input-style">
+        <button type="submit" class="button-style">Shorten</button>
+    </form>
+    {% if short_url %}
+    <p>Short URL: <a href="{{ short_url }}" class="link-style">{{ short_url }}</a></p>
+    {% endif %}
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
+    </div>
+</body>
+</html>

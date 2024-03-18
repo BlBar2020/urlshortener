@@ -1,0 +1,92 @@
+/* Global Styles Section */
+body,
+button,
+input,
+select {
+    font-family: Arial, sans-serif;
+}
+
+/* Reset Section */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Section */
+body {
+    background-color: black;
+    color: white;
+    justify-content: center;
+}
+
+/* Image Section */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Logo Section */
+.logo,
+.container img.logo {
+    margin-bottom: -10px;
+}
+
+/* Banner Section */
+.banner,
+.container img.banner {
+    max-width: 60%;
+    margin-top: 50px;
+}
+
+/* Container Section */
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+/* New Styles for URL Shortener Form and Elements */
+/* Form Style Section (New) */
+.form-style {
+    margin: 20px 0;
+}
+
+/* Input Style Section (New) */
+.input-style {
+    width: 80%; /* Adjust width as needed */
+    padding: 10px;
+    margin-bottom: 10px; /* Space between input and button */
+    font-size: 16px;
+    border-radius: 5px; /* Rounded corners for input */
+    border: 1px solid #fff; /* White border */
+}
+
+/* Button Style Section (Adapted from Add Task Button) */
+.button-style {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 0px;
+    transition-duration: 0.4s;
+    display: block; /* Center the button */
+    margin: 20px auto; /* Space above and below button */
+}
+
+.button-style:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+/* Link Style Section (New) */
+.link-style {
+    color: rgb(6, 115, 148); 
+    text-decoration: underline;
+}
+
+/* Adjust any additional styles as needed to match the aesthetics of your Task Manager project. */
